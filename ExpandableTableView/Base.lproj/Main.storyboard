@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExpandableTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yah-Rd-fpE">
+                                <rect key="frame" x="0.0" y="84" width="1024" height="384"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="xLd-sg-igf"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8y7-vV-ARQ"/>
+                                </connections>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write a comment here " translatesAutoresizingMaskIntoConstraints="NO" id="SG1-Oo-KZR">
+                                <rect key="frame" x="20" y="537" width="984" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpq-6Z-P8T">
+                                <rect key="frame" x="20" y="702" width="984" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.47006035039999999" blue="0.4010397966" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Post Comment "/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read Comment here " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR9-lk-wlV">
+                                <rect key="frame" x="8" y="55" width="172" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SG1-Oo-KZR" secondAttribute="trailing" constant="20" id="4aD-Po-zRB"/>
+                            <constraint firstItem="Yah-Rd-fpE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5ei-T8-Fje"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bpq-6Z-P8T" secondAttribute="trailing" constant="20" id="5wT-yV-rbN"/>
+                            <constraint firstItem="Yah-Rd-fpE" firstAttribute="top" secondItem="TR9-lk-wlV" secondAttribute="bottom" constant="8" id="6Zl-zu-Kxj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yah-Rd-fpE" secondAttribute="trailing" id="BEo-K6-qMb"/>
+                            <constraint firstItem="TR9-lk-wlV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="C0f-VH-vtx"/>
+                            <constraint firstItem="bpq-6Z-P8T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dj4-c1-4zz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TR9-lk-wlV" secondAttribute="trailing" constant="844" id="KAc-3Y-vOU"/>
+                            <constraint firstItem="TR9-lk-wlV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="LtL-p0-5RO"/>
+                            <constraint firstItem="SG1-Oo-KZR" firstAttribute="top" secondItem="Yah-Rd-fpE" secondAttribute="bottom" constant="69" id="ON3-aE-JSN"/>
+                            <constraint firstItem="bpq-6Z-P8T" firstAttribute="top" secondItem="SG1-Oo-KZR" secondAttribute="bottom" constant="37" id="RNX-Bh-oOt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yah-Rd-fpE" secondAttribute="bottom" constant="300" id="RXM-fk-b60"/>
+                            <constraint firstItem="Yah-Rd-fpE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="YNn-mX-6H4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bpq-6Z-P8T" secondAttribute="bottom" constant="32" id="bvE-P9-pAl"/>
+                            <constraint firstItem="SG1-Oo-KZR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qNc-Zz-2Pk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentTableView" destination="Yah-Rd-fpE" id="oAH-9f-qsg"/>
+                        <outlet property="commentTextBox" destination="SG1-Oo-KZR" id="dX8-wH-IVx"/>
+                        <outlet property="postComment" destination="bpq-6Z-P8T" id="9S1-If-acl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.984375" y="39.84375"/>
+        </scene>
+    </scenes>
+</document>
